@@ -1,0 +1,17 @@
+@use '../../foundation/mixin' as g;
+
+.c-header__menu{
+    display: none;
+
+    @include g.tab{
+       display: block;
+       padding-top: 4vw;
+       margin-right: 2vw;
+       text-shadow: 3px 4px 3px #fbffff;
+
+    }
+
+    @include g.pc{
+
+    }
+}

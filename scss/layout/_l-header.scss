@@ -1,0 +1,12 @@
+@use '../foundation/mixin' as g;
+
+.l-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(231,245,248, 0.6);
+    
+}
+.l-list-menu {
+    margin-left: 40px;
+   
+}

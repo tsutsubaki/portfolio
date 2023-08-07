@@ -1,0 +1,61 @@
+@use '../../foundation/mixin' as g;
+
+.p-main__section{
+    @include g.font-vw(14);
+    padding: 0px 10vw;
+    line-height: 8vw;
+    position: absolute;
+    margin-top: 8vw;
+    text-align: center;
+
+    @include g.tab{
+        @include g.font-vw(9);
+        padding: 0px 3vw;
+        line-height: 5.5vw;
+        position: static;
+     }
+}
+
+.p-section{
+    margin: 6vw 0 7vw;
+    font-weight: 900;
+    @include g.font-vw(14);
+
+    @include g.tab{  
+      
+}
+
+.p-second__title{
+    margin-bottom: 4vw;
+}
+}
+
+.p-second__section{
+    font-weight: 600;
+    padding-bottom: 2vw;
+  
+&:nth-child(2){
+    margin: 4vw 0;
+}
+
+&__secondry{
+    margin-top: 2vw;
+}
+
+&__detail{
+    margin-top: 9vw;
+    line-height: 7vw;
+    justify-content: center;
+    @include g.font-vw(15);
+
+            @include g.tab{  
+                @include g.font-vw(10);
+            } 
+}
+
+&__about{
+   line-height: 6vw;
+    padding-bottom: 10vw;
+
+ }
+}

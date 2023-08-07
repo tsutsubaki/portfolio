@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+
+@use'../scss/foundation/mixin';
+
+@use'../scss/layout/l-footer';
+@use'../scss/layout/l-header';
+@use'../scss/layout/l-main';
+@use'../scss/layout/l-wrapper';
+
+@use '../scss/object/component/c-header';
+@use '../scss/object/component/c-move';
+@use '../scss/object/component/c-background';
+@use '../scss/object/component/c-button';
+@use '../scss/object/component/c-adjustment';
+@use '../scss/object/component/c-logo';
+@use '../scss/object/component/c-line';
+
+
+@use '../scss/object/project/p-main';
+
+@use '../scss/setting/base';
+@use '../scss/setting/color';
+@use '../scss/setting/font-family';

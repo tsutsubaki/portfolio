@@ -1,0 +1,125 @@
+@use '../../foundation/mixin' as g;
+
+.openbtn9 {
+  position: relative;//*ボタン内側の基点となるためrelativeを指定*/
+  cursor: pointer;
+  width: 60px;
+  height:50px;
+  border-radius: 5px;
+  overflow: hidden;//*ジャンプしてはみ出た要素を消す*/
+  margin: auto 2vw;
+  opacity: 80%;
+
+  @include g.tab{
+   display: none;     
+  }
+}
+  
+/*ボタン内側*/
+
+.openbtn9 .openbtn-area{
+    transition: all .4s;//*アニメーションの設定*/
+}
+
+.openbtn9 span{
+    display: inline-block;
+    transition: all .4s;//*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(48, 59, 69, 0.8980392157);
+    width: 45%;
+  }
+
+
+.openbtn9 span:nth-of-type(1) {
+  top:15px; 
+}
+
+.openbtn9 span:nth-of-type(2) {
+  top:26px;
+}
+
+.openbtn9 span:nth-of-type(3) {
+  top:37px;
+}
+
+
+/*activeクラスが付与されると .openbtn-areaが360度回転し、
+//その中の線のtopの位置や形状が変化して×に*/
+
+.openbtn9.active .openbtn-area{
+  transform: rotateX(360deg);
+}
+
+.openbtn9.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 30%;
+}
+
+.openbtn9.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn9.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 30%;
+}
+
+//ひかるボタン
+/*きらっと光る*/
+
+.btnshine{
+  /*キラッと光る基点とするためrelativeを指定*/
+position: relative;
+  /*ボタンの形状*/  
+display:inline-block;
+  background: #0f8bbeb8;;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10%;
+  text-decoration: none;
+  outline: none;
+  overflow: hidden;
+}
+
+/*キラッと光る*/
+.btnshine::before {
+content: '';
+  /*絶対配置でキラッと光るの位置を決める*/
+position: absolute;
+top: 0;
+left: -75%;
+  /*キラッと光る形状*/
+  width: 50%;
+height: 100%;
+background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+transform: skewX(-25deg);
+}
+
+/*hoverした際の移動のアニメーション*/
+.btnshine:hover::before {
+animation: shine 0.7s;
+}
+
+@keyframes shine {
+100% {
+  left: 125%;
+}
+}
+
+/*========= レイアウトのためのCSS ===============*/
+body{
+  vertical-align:middle; 
+ 
+  text-align: center;
+}
+
+p{
+  margin: 0 0 10px 0;
+}

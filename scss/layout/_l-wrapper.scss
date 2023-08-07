@@ -1,0 +1,18 @@
+@use '../foundation/mixin' as g;
+
+.l-wrapper{
+    
+}
+
+
+.l-section__wrapper{
+    position: relative;
+
+    @include g.tab{
+    padding-top: 3vw;
+    margin: auto 2vw;
+}
+}
+
+  
+  

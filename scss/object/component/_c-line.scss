@@ -1,0 +1,8 @@
+@use '../../foundation/mixin' as g;
+
+.c-line{
+    @include g.tab{
+    border: solid #C4DFE6 1px;
+    border-radius: 10%;
+    }
+}

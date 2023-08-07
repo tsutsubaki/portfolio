@@ -1,0 +1,28 @@
+@use '../foundation/mixin' as g;
+
+.l-secondary__content{
+    margin: 0 7vw;
+    flex-direction: column;
+     border: solid #36424d3b 1px;
+    border-radius: 10%;
+    padding: 6vw;
+    background-color: rgba(231,245,248, 0.6);
+    
+
+    @include g.tab{
+        margin: 5vw 7vw;
+    }
+}
+
+.l-main__flex{
+    @include g.tab{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  
+
+       }
+    
+
+}
+

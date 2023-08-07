@@ -1,0 +1,11 @@
+@use '../../foundation/mixin' as g;
+
+.c-logo{
+    width: 9.333333vw;
+    margin: 2vw;
+
+    @include g.tab{
+     width: 6.333333vw;   
+
+    }
+}

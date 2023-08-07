@@ -1,0 +1,14 @@
+@use '../../foundation/mixin' as g;
+
+.c-flex {
+    display: flex;
+}
+
+.c-center{
+    justify-content: center;
+    display: flex;
+}
+
+.c-content{
+    text-align: left;
+}

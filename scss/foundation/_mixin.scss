@@ -1,0 +1,63 @@
+// ブレイクポイントを指定
+$pc: 1025px;
+$tab: 600px;
+
+
+@mixin pc {
+  @media screen and (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (min-width: ($tab)) {
+    @content;
+  }
+}
+
+
+//呼び出し例
+//.block {
+    // width: 30%;
+
+    //@include pc {
+     //width: 50%;
+    //}
+  
+    //@include tab {
+    //  width: 80%;
+    //}
+      
+  //}
+
+//----------------------------------------------------
+   
+  
+ //pxをvwに変換するfunction
+@function _get_vw($size, $viewport) {
+    $rate: calc(100 / $viewport);
+    @return $rate * $size * 1vw;
+  }
+  //フォント用のmixin
+  @mixin font-vw($font_size: 10, $viewsize: 375) {
+    font-size: $font_size * 1px;
+    font-size: _get_vw($font_size, $viewsize);
+  }
+  
+  //画像用のmixin
+  @mixin img-vw($img_size, $viewsize: 375) {
+    width: $img_size * 1px;
+    width: _get_vw($img_size, $viewsize);
+  }
+ 
+  //使う時　@use '../../foundation/mixin' as g;
+  //.example {  @include g.font-vw(16);}
+
+  //背景グラデーション
+  @mixin gradient($direction, $color-1, $color-2) {
+    background-image: linear-gradient($direction, $color-1, $color-2);
+  }
+ /*  呼び出し時 mixinを使用
+.gradient {
+  @include gradient(135deg, #f571fa, #2be6ff);
+  */
